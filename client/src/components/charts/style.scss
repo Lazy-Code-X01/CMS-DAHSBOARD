@@ -1,0 +1,32 @@
+
+.summary{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .items{
+        text-align: center;
+        // background-color: red;
+
+        .itemTitle{
+            font-size: 16px;
+            color: #585858;
+        }
+
+        .itemPercentage{
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            font-size: 16px;
+
+            &.positive{
+                color: green;
+            }
+
+            &.negative{
+                color: red;
+            }
+        }
+    }
+}

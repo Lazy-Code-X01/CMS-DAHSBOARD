@@ -1,0 +1,50 @@
+
+.styledTableHead{
+    background-color: #f5f5f5;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    // color: grey;
+    // color: red;
+}
+.styledTableRow{
+    // background-color: red;
+}
+.Member{
+    color: #000080;
+}
+.Worker{
+    color: crimson;
+}
+.Minister{
+    color: green;
+}
+.cellWrapper{
+    display: flex;
+    align-items: center;
+    color: gray;
+    
+    .image{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+        object-fit: cover;
+    }
+}
+
+.bio-btn{
+    padding: 5px;
+    border-radius: 5px;
+    width: max-content;
+    color: white;
+    font-weight: 700;
+    &.Success{
+        color: green;
+       background-color: rgba(43, 154, 43, 0.335); 
+    }
+    &.Pending{
+        color: crimson;
+        background-color: rgba(220, 20, 60, 0.315);
+    }
+}

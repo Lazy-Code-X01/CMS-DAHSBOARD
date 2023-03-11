@@ -111,3 +111,24 @@
         }
     }
 }
+
+
+
+@media screen and (max-width: 768px) {
+
+    .user{
+        flex-direction: column;
+    }
+    .userUpdate{
+        .userUpdateForm{
+            display: block;
+        
+            .userUpdateRight{
+                gap: 20px;
+                .userUpdateUpload{
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

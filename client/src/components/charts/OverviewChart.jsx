@@ -23,6 +23,7 @@ const OverviewChart = ({aspect}) => {
       flexDirection='column'
       borderRadius='15px'
       boxShadow='2px 4px 10px 1px rgba(201,201,201,0.47)'
+      width={{xs: '100%'}}
     >
       <Typography fontSize={18} fontWeight={600} color='#808191'>
         Attendance Within Last 6 Months

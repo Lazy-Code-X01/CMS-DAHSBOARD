@@ -12,13 +12,13 @@ import { useState } from 'react'
 // importing data
 import data from '../../data/membersData'
 
-
 // importing images
 import { profile } from '../../assets'
 import { profile2 } from '../../assets'
 
 
 import './membersTable.scss'
+import { width } from '@pankod/refine-mui';
 
 const MembersTable = () => {
   const navigate = useNavigate()
@@ -164,7 +164,8 @@ const MembersTable = () => {
   };
 
   return (
-    <TableContainer component={Paper} className='table'>
+
+    <TableContainer component={Paper} className='table' >
 
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
 
@@ -207,7 +208,7 @@ const MembersTable = () => {
                       <span 
                         className="view" 
                         // onClick={goToTop}
-                        onClick={()=>navigate('/member/show')}  
+                        onClick={()=>navigate('/member/show')} 
                       >
                         View
                       </span>
@@ -219,6 +220,7 @@ const MembersTable = () => {
             </TableBody>
         </Table>
     </TableContainer>
+
   )
 }
 

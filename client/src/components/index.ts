@@ -12,6 +12,8 @@ import TotalRevenue from './charts/TotalRevenue';
 import AgentCard from './members/MembersTable';
 import MembersTable from './members/MembersTable';
 
+// testing
+import List from './List/List';
 
 // home
 import TopAgent from './home/TopAgent';
@@ -28,4 +30,5 @@ export {
   AgentCard,
   TopAgent,
   MembersTable,
+  List
 };

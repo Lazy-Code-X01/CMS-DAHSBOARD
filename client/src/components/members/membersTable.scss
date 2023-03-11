@@ -1,6 +1,7 @@
-
 .table{
-    
+    // margin-top: 20px;
+    overflow: auto;
+
     .tableHead{
         background-color: #F9FAFB;
 
@@ -89,3 +90,8 @@
     }
 
 }
+// @media screen and (max-width: 320px) {
+//     .table{
+//         width: 300px;
+//     }
+// }

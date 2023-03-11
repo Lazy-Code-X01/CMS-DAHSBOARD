@@ -2,7 +2,8 @@ import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 import {useList} from '@pankod/refine-core'
 import {Box, Stack, Typography} from "@pankod/refine-mui"
 import { useNavigate } from '@pankod/refine-react-router-v6'
-import { MembersTable, CustomButton } from 'components'
+import { MembersTable, CustomButton, List } from 'components'
+
 
 const AllMembers = () => {
 
@@ -26,13 +27,19 @@ const AllMembers = () => {
         />
       </Stack>
 
-      <Box 
+      <Box
         mt='20px' 
-        // padding='20px'
         boxShadow='2px 4px 10px 1px rgba(201,201,201,0.47)'
         bgcolor={'#fff'} 
+        // sx={{ height: 'calc(100vh - 150px)' }}
+        overflow={'auto'}
       >
-        <MembersTable />
+        <Box sx={{ overflow: "auto" }}>
+        <Box sx={{ width: "100%", display: "table", tableLayout: "fixed" }}>
+          {/* <List /> */}
+          <MembersTable />
+        </Box>
+        </Box>
       </Box>
     </Box>
   )

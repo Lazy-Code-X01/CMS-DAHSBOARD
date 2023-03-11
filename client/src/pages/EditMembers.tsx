@@ -31,9 +31,11 @@ const EditMembers = () => {
 
       <Box 
         mt='20px' 
-        // padding='20px'
         display={'flex'}
         gap={'20px'}
+        className='user'
+        // flexDirection={{xs: 'column'}}
+        // padding='20px'
         // bgcolor={'#fff'} 
       >
 
@@ -171,7 +173,7 @@ const EditMembers = () => {
                     <MenuItem value='youth'> Youth </MenuItem>
                     <MenuItem value='children'> Children </MenuItem>
                   </Select>
-                </FormControl>'
+                </FormControl>
 
                 
                 <FormControl  className='userUpdateItem'>
@@ -229,10 +231,6 @@ const EditMembers = () => {
                       className='input'
                     />
                 </FormControl>
-
-
-                
-
             </div>
 
             <div className="userUpdateRight">

@@ -23,7 +23,11 @@ const Attendance = () => {
             boxShadow='2px 4px 10px 1px rgba(201,201,201,0.47)'
             bgcolor={'#fff'}
         >
-            <AttendanceTable />
+            <Box sx={{ overflow: "auto" }}>
+            <Box sx={{ width: "100%", display: "table", tableLayout: "fixed" }}>
+                <AttendanceTable /> 
+            </Box>
+            </Box>
         </Box>
     </Box>
   )

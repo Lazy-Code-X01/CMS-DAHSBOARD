@@ -12,11 +12,13 @@ const FeaturedChart = () => {
       p={4} 
       bgcolor='#fcfcfc'
       id='chart'
-      minWidth={470}
-      display='flex'
+      // minWidth={470}
+      minWidth={{xs: '100%', lg: 470}}
+      display={{lg: 'flex'}}
       flexDirection='column'
       borderRadius='15px'
       boxShadow='2px 4px 10px 1px rgba(201,201,201,0.47)'
+      // display='none'
     >
       <Typography fontSize={18} fontWeight={600} color='#808191'>
         Total Members as at 5th Feb, 2023

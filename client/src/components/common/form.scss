@@ -1,3 +1,13 @@
+.create-form{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+}
+
+.formcontrol{
+    width: 40%;
+}
+
 .left{
     flex: 1;
     text-align: center;
@@ -15,7 +25,6 @@
 .right{
     flex: 3;
     padding: 20px;
-    
     .stack{
         display: flex;
         flex-wrap: wrap;
@@ -33,6 +42,22 @@
     
             .icon{
                 cursor: pointer;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .create-form{
+        display: block;
+
+        .right{
+            .stack{
+                flex-direction: column;
+                .formcontrol{
+                    width: 100%;
+                }
             }
         }
     }

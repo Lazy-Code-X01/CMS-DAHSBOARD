@@ -24,8 +24,10 @@ const MemberDetails = () => {
       <Box
         display='flex'
         gap='20px' 
+        // flexDirection={{xs: 'column'}}
+        className='hhh'
       > 
-      {/* left side */}
+       {/* left side */}
         <Box  position='relative' flex={'1'} padding='20px' boxShadow='2px 4px 10px 1px rgba(201,201,201,0.47)' borderRadius='15px' bgcolor={'#fff'}>
           <Typography 
             className="editButton"
@@ -114,9 +116,14 @@ const MemberDetails = () => {
         boxShadow='2px 4px 10px 1px rgba(201,201,201,0.47)'
         bgcolor={'#fff'}   
         borderRadius='15px'
+        overflow='auto'
       >
         <Typography fontSize={'20px'} fontWeight={'700'} color='#808191' mb={'20px'}>Other Members</Typography>        
-        <MembersTable />
+        <Box sx={{ overflow: "auto" }}>
+        <Box sx={{ width: "100%", display: "table", tableLayout: "fixed" }}>
+          <MembersTable />
+        </Box>
+        </Box>
       </Box>
     </Box>
 

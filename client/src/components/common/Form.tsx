@@ -20,10 +20,10 @@ const Form = ({type, register, handleSubmit, handleImageChange, formLoading, onF
         mt={2.5} 
         borderRadius='15px' 
         padding='20px' 
-        bgcolor='#fcfcfc' 
+        bgcolor='#fff' 
         boxShadow='2px 4px 10px 1px rgba(201,201,201,0.47)'
       >
-        <form style={{marginTop: '20px', width:'100%', display: 'flex'}} onSubmit={handleSubmit(onFinishHandler)}>
+        <form className='create-form' onSubmit={handleSubmit(onFinishHandler)}>
             {/* left side */}
             <Box className='left'>
               <img
@@ -38,7 +38,7 @@ const Form = ({type, register, handleSubmit, handleImageChange, formLoading, onF
             <Box className='right'>
               <Box className='stack'>
 
-                <FormControl style={{width: '40%'}}>
+                <FormControl className='formcontrol'>
                   <label htmlFor='file'>
                     Image: <DriveFolderUploadRoundedIcon className='icon' />
                   </label>
@@ -52,7 +52,7 @@ const Form = ({type, register, handleSubmit, handleImageChange, formLoading, onF
                   />
                 </FormControl>
 
-                <FormControl style={{width: '40%'}}>
+                <FormControl className='formcontrol' >
                   <label>Username</label>
                   <TextField
                     variant='outlined'
@@ -63,7 +63,7 @@ const Form = ({type, register, handleSubmit, handleImageChange, formLoading, onF
                   />
                 </FormControl>
 
-                <FormControl style={{width: '40%'}}>
+                <FormControl className='formcontrol'>
                   <label>Name and Surname</label>
                   <TextField
                     variant='outlined'
@@ -74,7 +74,7 @@ const Form = ({type, register, handleSubmit, handleImageChange, formLoading, onF
                   />
                 </FormControl>
 
-                <FormControl style={{width: '40%'}}>
+                <FormControl className='formcontrol'>
                   <label>Email</label>
                   <TextField
                     variant='outlined'
@@ -85,7 +85,7 @@ const Form = ({type, register, handleSubmit, handleImageChange, formLoading, onF
                   />
                 </FormControl>
 
-                <FormControl style={{width: '40%'}}>
+                <FormControl className='formcontrol'>
                   <label>Phone</label>
                   <TextField
                     variant='outlined'
@@ -97,7 +97,7 @@ const Form = ({type, register, handleSubmit, handleImageChange, formLoading, onF
                   />
                 </FormControl>
                 
-                <FormControl style={{width: '40%'}}>
+                <FormControl className='formcontrol'>
                   <label>Status</label>
                   <TextField
                     variant='outlined'
@@ -108,7 +108,7 @@ const Form = ({type, register, handleSubmit, handleImageChange, formLoading, onF
                   />
                 </FormControl>
 
-                <FormControl style={{width: '40%'}}>
+                <FormControl  className='formcontrol'>
                   <label>Departent</label>
                   <Select
                     variant='outlined'
@@ -131,7 +131,7 @@ const Form = ({type, register, handleSubmit, handleImageChange, formLoading, onF
                   </Select>
                 </FormControl>
 
-                <FormControl style={{width: '40%'}}>
+                <FormControl  className='formcontrol'>
                   <label>Number of Next of Kin</label>
                   <TextField
                     variant='outlined'
@@ -143,7 +143,7 @@ const Form = ({type, register, handleSubmit, handleImageChange, formLoading, onF
                   />
                 </FormControl>
 
-                <FormControl style={{width: '40%'}}>
+                <FormControl  className='formcontrol'>
                   <label>Birthday</label>
                   <TextField
                     variant='outlined'
@@ -155,7 +155,7 @@ const Form = ({type, register, handleSubmit, handleImageChange, formLoading, onF
                   />
                 </FormControl>
 
-                <FormControl style={{width: '40%'}}>
+                <FormControl  className='formcontrol'>
                   <label>Address</label>
                   <TextField
                     variant='outlined'
@@ -166,7 +166,7 @@ const Form = ({type, register, handleSubmit, handleImageChange, formLoading, onF
                   />
                 </FormControl>
 
-                <FormControl style={{width: '40%'}}>
+                <FormControl  className='formcontrol'>
                   <label>State of Origin</label>
                   <TextField
                     variant='outlined'
@@ -177,7 +177,7 @@ const Form = ({type, register, handleSubmit, handleImageChange, formLoading, onF
                   />
                 </FormControl>
 
-                <FormControl style={{width: '40%'}}>
+                <FormControl  className='formcontrol'>
                   <label>Country</label>
                   <TextField
                     variant='outlined'

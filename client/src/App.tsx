@@ -27,6 +27,9 @@ import { ColorModeContextProvider } from "contexts";
 import { Title, Sider, Layout, Header } from "components/layout";
 import { CredentialResponse } from "interfaces/google";
 import { parseJwt } from "utils/parse-jwt";
+// import style
+// import './index.css'
+
 import { 
   Login,
   Home,

@@ -16,7 +16,6 @@ export const Login: React.FC = () => {
       if (typeof window === "undefined" || !window.google || !divRef.current) {
         return;
       }
-
       try {
         window.google.accounts.id.initialize({
           ux_mode: "popup",
@@ -66,7 +65,7 @@ export const Login: React.FC = () => {
           <div>
             <img src={caas} alt="caas Logo" />
           </div>
-          <Box mt={4}>
+          <Box mt={2}>
             <GoogleButton />
           </Box>
         </Box>
@@ -76,12 +75,44 @@ export const Login: React.FC = () => {
 };
 
 
-// import React from 'react'
+// import { Home } from 'pages';
+// import React, {useState} from 'react'
+
+// import home from './home';
 
 // const Login = () => {
+//   const [password, setPassword] = useState("");
+//   const [isLoggedIn, setIsLoggedIn] = useState(false);
+//   //@ts-expect-error
+//   function handlePasswordChange(event) {
+//     setPassword(event.target.value);
+//   }
+  
+//   //@ts-expect-error
+//   function handleSubmit(event) {
+//     event.preventDefault();
+//     if (password === "mypassword") {
+//       setIsLoggedIn(true);
+//     } else {
+//       alert("Incorrect password. Please try again.");
+//     }
+//   }
+
+//   if (isLoggedIn) {
+//     return <Home />;
+//   }
+
 //   return (
-//     <div>Login</div>
+//     <div>
+//         <form onSubmit={handleSubmit}>
+//       <label>
+//         Password:
+//         <input type="password" value={password} onChange={handlePasswordChange} />
+//       </label>
+//       <button type="submit">Log In</button>
+//     </form>
+//     </div>
 //   )
 // }
 
-// export default Login
+// export default Login;

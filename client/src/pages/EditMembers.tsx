@@ -1,5 +1,5 @@
 import { CustomButton } from 'components'
-import {Box, Stack, Typography, FormControl, Select, MenuItem, TextField} from "@pankod/refine-mui"
+import {Box, Stack, Typography, FormControl, Select, MenuItem, TextField,} from "@pankod/refine-mui"
 import { useNavigate } from '@pankod/refine-react-router-v6'
 import {profile} from '../assets'
 import './scss/editMembers.scss'
@@ -144,7 +144,6 @@ const EditMembers = () => {
                       size='small'
                       className='input'
                       displayEmpty
-                      defaultValue={'Male'}
                     >
                       <MenuItem value='chior'> Male </MenuItem>
                       <MenuItem value='media'> Female </MenuItem>

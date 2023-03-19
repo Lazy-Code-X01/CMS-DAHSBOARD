@@ -10,8 +10,8 @@ import {
 
 import FeaturedChart from "components/charts/FeaturedChart"
 import OverviewChart from "components/charts/OverviewChart"
-
 import { Typography, Box, Stack } from "@pankod/refine-mui"
+import AttendanceTable from "components/attendance/AttendanceTable"
 
 const home = () => {
   return (
@@ -26,19 +26,19 @@ const home = () => {
           title='New Members for this Month'
           value={684}
           series={[75, 25]}
-          colors={['#000080', '#e4e8ef']}
+          colors={['#000080', '#7EA7F4']}
         />
         <PieChart 
           title='Present in Attendance'
           value={550}
           series={[60, 40]}
-          colors={['#000080', '#e4e8ef']}
+          colors={['#006633', '#90BC61']}
         />
         <PieChart 
           title='Total Members'
           value={5684}
           series={[75, 25]}
-          colors={['#000080', '#e4e8ef']}
+          colors={['#8B4000', '#FF9933']}
           // colors={['#475ae8', '#e4e8ef']}
         />
       </Box>
@@ -49,6 +49,22 @@ const home = () => {
         />
         <FeaturedChart />
       </Stack>
+
+      <Box
+        mt={'20px'}
+        boxShadow='2px 4px 10px 1px rgba(201,201,201,0.47)'
+        bgcolor='#fcfcfc'
+        p={4}
+        borderRadius='15px'
+      >
+        <Typography fontSize={20} fontWeight={700} color='#808191'>Attendees for <i>5th Feb, 2023</i></Typography>
+        <Box sx={{ overflow: "auto", marginTop: '15px' }}>
+          <Box sx={{ width: "100%", display: "table", tableLayout: "fixed" }}>
+            <AttendanceTable /> 
+          </Box>
+        </Box>
+      </Box>
+
     </Box>
   )
 }

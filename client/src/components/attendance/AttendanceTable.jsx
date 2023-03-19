@@ -41,14 +41,14 @@ const AttendanceTable = () => {
         
         <TableHead >
             <TableRow >
-            <StyledTableCell  className='styledTableHead'>ID</StyledTableCell>
-            <StyledTableCell  className='styledTableHead'>Name</StyledTableCell>
-            <StyledTableCell  className='styledTableHead'>GENDER</StyledTableCell>
-            <StyledTableCell  className='styledTableHead'>STATUS</StyledTableCell>
-            <StyledTableCell  className='styledTableHead'>DEPARTMENT</StyledTableCell>
-            <StyledTableCell  className='styledTableHead'>TIME</StyledTableCell>
+            <StyledTableCell  className='styledTableHead' style={{fontWeight: '700', fontSize: '16px'}}>ID</StyledTableCell>
+            <StyledTableCell  className='styledTableHead' style={{fontWeight: '700', fontSize: '16px'}}>Name</StyledTableCell>
+            <StyledTableCell  className='styledTableHead' style={{fontWeight: '700', fontSize: '16px'}}>GENDER</StyledTableCell>
+            <StyledTableCell  className='styledTableHead' style={{fontWeight: '700', fontSize: '16px'}}>STATUS</StyledTableCell>
+            <StyledTableCell  className='styledTableHead' style={{fontWeight: '700', fontSize: '16px'}}>DEPARTMENT</StyledTableCell>
+            <StyledTableCell  className='styledTableHead' style={{fontWeight: '700', fontSize: '16px'}}>TIME</StyledTableCell>
             {/* <StyledTableCell  className='styledTableHead'>Role</StyledTableCell> */}
-            <StyledTableCell  className='styledTableHead'>Biometrics</StyledTableCell>
+            <StyledTableCell  className='styledTableHead' style={{fontWeight: '700', fontSize: '16px'}}>Biometrics</StyledTableCell>
             </TableRow>
         </TableHead>
         

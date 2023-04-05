@@ -267,7 +267,7 @@ export const Sider: typeof DefaultSider = ({ render }) => {
       </Tooltip>
     </CanAccess>
   ) : null;
-
+  
   const logout = isExistAuthentication && (
     <Tooltip
       title={t("buttons.logout", "Logout")}

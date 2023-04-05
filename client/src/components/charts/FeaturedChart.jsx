@@ -1,10 +1,16 @@
-import ReactApexChart  from 'react-apexcharts'
-import { Box, Typography,Stack, colors } from '@pankod/refine-mui'
-import {CircularProgressbar} from 'react-circular-progressbar'
+// import ReactApexChart  from 'react-apexcharts'
+import { Box, Typography,Stack } from '@pankod/refine-mui'
+
+import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 import { grey } from '@mui/material/colors';
+
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import './style.scss'
+
+
+
 
 const FeaturedChart = () => {
   return (
@@ -32,17 +38,25 @@ const FeaturedChart = () => {
         gap='10px'
         padding='20px'
       >
-        <Stack height='100px' width='100px'>
-
-          <CircularProgressbar value={80} text='80%' strokeWidth={10} 
-              styles={{
-                root: { width: 100 },
-                path: { stroke: `#000080` },
-                trail: { stroke: `#e4e8ef` },
-                text: { fill: grey[800], fontSize: '1.5rem',},
+        <Stack height='100px' width='100px'>          
+          <CircularProgressbarWithChildren value={80} strokeWidth={10}
+            styles={{
+              root: { width: 100 },
+              path: { stroke: `#000080` },
+              trail: { stroke: `#e4e8ef` },
+              text: { fill: grey[800], fontSize: '1.5rem',},
+              textStyle: {
+                fill: grey[800],
+                fontSize: '1.5rem',
+                dominantBaseline: 'middle',
+                textAnchor: 'middle',
+              },
             }}
-          />
-          
+          >
+            <div style={{ fontSize: '1.5rem' }}>
+              {`80%`}
+            </div>
+          </CircularProgressbarWithChildren>
         </Stack>
 
         <Typography color='#585858' fontWeight='500' textTransform='capitalize' >total members 5th Feb, 2023</Typography>
@@ -76,8 +90,6 @@ const FeaturedChart = () => {
             </div>
         </div>
       </Stack>
-
-      
     </Box>
   )
 }

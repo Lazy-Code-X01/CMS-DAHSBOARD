@@ -7,12 +7,8 @@ import CreateMembers from './CreateMembers';
 import Attendance from './Attendance';
 import Home from './home';
 import { Login } from './login';
-// import Login from './login'
 import MyProfile from './my-profile';
-// import CreateProperty from './create-property';
-// import AllProperties from './all-properties';
-// import PropertyDetails from './property-details';
-// import EditProperty from './edit-property';
+import ForgotPasswordPage from './ForgotPasswordPage';
 
 export {
   AgentProfile,
@@ -25,6 +21,7 @@ export {
   MemberDetails,
   EditMembers,
   Attendance,
+  ForgotPasswordPage,
   // AllProperties,
   // CreateProperty,
 };

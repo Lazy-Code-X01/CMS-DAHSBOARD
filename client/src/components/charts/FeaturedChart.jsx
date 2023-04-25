@@ -53,7 +53,7 @@ const FeaturedChart = () => {
               },
             }}
           >
-            <div style={{ fontSize: '1.5rem' }}>
+            <div style={{ fontSize: '1.5rem', fontWeight: '700' }} >
               {`80%`}
             </div>
           </CircularProgressbarWithChildren>

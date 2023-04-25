@@ -30,7 +30,9 @@ export const Login: React.FC = () => {
   };
 
   const navigate = useNavigate()
-
+  const handleForgotPasswordClick = () => {
+    navigate('/forgot-password');
+  };
   return (
     <Box
     component="div"
@@ -125,9 +127,10 @@ export const Login: React.FC = () => {
               mt={2}
             >
               <Button
+              type="button"
                 color="primary"
                 size="small"
-                onClick={() => alert("Forgot Password")}
+                onClick={handleForgotPasswordClick}
               >
                 Forgot Password?
               </Button>

@@ -6,7 +6,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { useNavigate } from '@pankod/refine-react-router-v6'
+import { Link, useNavigate } from '@pankod/refine-react-router-v6'
 import { useState } from 'react'
 
 // importing data
@@ -18,7 +18,7 @@ import { profile2 } from '../../assets'
 
 
 import './membersTable.scss'
-import { width } from '@pankod/refine-mui';
+// import { width } from '@pankod/refine-mui';
 
 const MembersTable = () => {
   const navigate = useNavigate()
@@ -86,7 +86,7 @@ const MembersTable = () => {
       dob: 'Nov., 22',    
     },
     {
-      id: 1,
+      id: 7,
       name: 'Tunde Amos',
       phone: '+2349019953850',
       img: profile,
@@ -96,7 +96,7 @@ const MembersTable = () => {
       dob: 'Nov., 22',
     },
     {
-      id: 2,
+      id: 8,
       name: 'John Doe',
       phone: '+2349019953850',
       img: profile2,
@@ -106,7 +106,7 @@ const MembersTable = () => {
       dob: 'Nov., 22',
     },
     {
-      id: 3,
+      id: 9,
       name: 'Adeyemi Juwon',
       phone: '+2349019953850',
       img: profile,
@@ -116,7 +116,7 @@ const MembersTable = () => {
       dob: 'Nov., 22',
     },
     {
-      id: 4,
+      id: 10,
       name: 'Stanley Okoli',
       phone: '+2349019953850',
       img: profile,
@@ -126,7 +126,7 @@ const MembersTable = () => {
       dob: 'Nov., 22',
     },
     {
-      id: 5,
+      id: 11,
       name: 'Emmanuel Dara',
       phone: '+2349019953850',
       img: profile2,
@@ -136,7 +136,7 @@ const MembersTable = () => {
       dob: 'Nov., 22',   
     },
     {
-      id: 6,
+      id: 12,
       name: 'Domminion Tunde',
       phone: '+2349019953850',
       img: profile,
@@ -162,6 +162,16 @@ const MembersTable = () => {
         behavior: "smooth",
     });
   };
+  // onclick function to the member deatails page with the dynamic id
+  const goToMemberDetailsPage = () => {
+    navigate(`/member/show/${data.id}`)
+  }
+
+  // combine thw two functions to assign to an onlcick
+  const combineFunctions = () => {
+    goToTop()
+    goToMemberDetailsPage()
+  }
 
   return (
 
@@ -204,15 +214,15 @@ const MembersTable = () => {
                     <TableCell className={`tableCell ${data.status}`}>{data.status}</TableCell>
                     <TableCell className="tableCell">{data.dept}</TableCell> 
                     <TableCell className="tableCell action">
-                    {/* <Link to='/lists/members/singletest' style={{textDecoration: 'none'}}> */}
+                    <Link to={`/member/show/${data.id}`} style={{textDecoration: 'none'}}>
                       <span 
                         className="view" 
-                        // onClick={goToTop}
-                        onClick={()=>navigate('/member/show')} 
+                        onClick={goToTop}
+                        // onClick={combineFunctions}
                       >
-                        View
+                        View Details
                       </span>
-                    {/* </Link> */}
+                    </Link>
                       <span className="delete" onClick={()=>handleDelete(data.id)}>Delete</span>
                     </TableCell>
                 </TableRow>

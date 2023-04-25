@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react";import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 
-import { Refine, AuthProvider } from "@pankod/refine-core";
+import { Refine, AuthProvider,  } from "@pankod/refine-core";
 import {
   notificationProvider,
   RefineSnackbarProvider,
@@ -40,7 +40,8 @@ import {
   AgentProfile,
   CreateMembers,
   EditMembers,
-  Attendance
+  Attendance,
+  ForgotPasswordPage
 } from "pages";
 
 
@@ -101,6 +102,7 @@ function App() {
       return Promise.reject();
     },
 
+
     getPermissions: () => Promise.resolve(),
     getUserIdentity: async () => {
       const user = localStorage.getItem("user");
@@ -115,54 +117,63 @@ function App() {
       <CssBaseline />
       <GlobalStyles styles={{ html: { WebkitFontSmoothing: "auto" } }} />
       <RefineSnackbarProvider>
-        <Refine
-          dataProvider={dataProvider("https://api.fake-rest.refine.dev")}
-          notificationProvider={notificationProvider}
-          ReadyPage={ReadyPage}
-          catchAll={<ErrorComponent />}
-          resources={[
-            {
-              name: "member",
-              list: AllMembers,
-              create: CreateMembers,
-              edit: EditMembers,
-              show: MemberDetails,
-              icon: <PeopleAltRoundedIcon />,
-            },
-            {
-              name: "attendnace",
-              options: {label: "Attendnace"},
-              list: Attendance,
-              icon: <AutoStoriesRoundedIcon />,
-            },
-            {
-              name: "subscription",
-              options: {label: "Subscription"},
-              list: MuiInferencer,
-              icon: <AccountBalanceRoundedIcon />,
-            },
-            {
-              name: "settings",
-              list: MuiInferencer,
-              icon: <SettingsSuggestRoundedIcon />,
-            },
-            {
-              name: "profile",
-              options: {label: "Profile"},
-              list: MuiInferencer,
-              icon: <AccountCircleRoundedIcon />,
-            },
-          ]}
-          Title={Title}
-          Sider={Sider}
-          Layout={Layout}
-          Header={Header}
-          routerProvider={routerProvider}
-          authProvider={authProvider}
-          LoginPage={Login}
-          DashboardPage = {Home}
-        />
-      </RefineSnackbarProvider>
+        {/* <BrowserRouter> */}
+          <Refine
+            dataProvider={dataProvider("https://api.fake-rest.refine.dev")}
+            notificationProvider={notificationProvider}
+            ReadyPage={ReadyPage}
+            catchAll={<ErrorComponent />}
+            resources={[
+              {
+                name: "member",
+                list: AllMembers,
+                create: CreateMembers,
+                edit: EditMembers,
+                show: MemberDetails,
+                
+                icon: <PeopleAltRoundedIcon />,
+              },
+              {
+                name: "attendnace",
+                options: {label: "Attendnace"},
+                list: Attendance,
+                icon: <AutoStoriesRoundedIcon />,
+              },
+              {
+                name: "subscription",
+                options: {label: "Subscription"},
+                list: MuiInferencer,
+                icon: <AccountBalanceRoundedIcon />,
+              },
+              {
+                name: "settings",
+                list: MuiInferencer,
+                icon: <SettingsSuggestRoundedIcon />,
+              },
+              {
+                name: "profile",
+                options: {label: "Profile"},
+                list: ForgotPasswordPage,
+                icon: <AccountCircleRoundedIcon />,
+              },
+              // add a forgot password page
+            ]}
+            Title={Title}
+            Sider={Sider}
+            Layout={Layout}
+            Header={Header}
+            routerProvider={routerProvider}
+            authProvider={authProvider}
+            LoginPage={Login}
+            DashboardPage = {Home}
+          >
+            <Routes>
+              {/* <Route path="/login" element={<Outlet />} /> */}
+              <Route path="/member/:memberId" element={<MemberDetails />} />
+              {/* <Route path="/forgot-password" element={<ForgotPasswordPage />} /> */}
+            </Routes>
+          </Refine>
+       </RefineSnackbarProvider>
     </ColorModeContextProvider>
   );
 }

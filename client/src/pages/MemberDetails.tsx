@@ -5,12 +5,12 @@ import { MembersTable } from "components"
 // importing external styles
 import './scss/memberDetails.scss'
 import {profile} from '../assets'
-import { useNavigate } from '@pankod/refine-react-router-v6'
+import { useNavigate, useParams } from '@pankod/refine-react-router-v6'
 
 const MemberDetails = () => {
   
   const navigate = useNavigate()
-
+    
   return (
     <Box>
       <Stack direction='row'

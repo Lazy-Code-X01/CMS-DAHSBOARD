@@ -246,9 +246,7 @@ const EditMembers = () => {
             </div>
           </form>
         </div>
-
       </Box>
-
     </Box>
   )
 }

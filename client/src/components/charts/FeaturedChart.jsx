@@ -9,9 +9,6 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import './style.scss'
 
-
-
-
 const FeaturedChart = () => {
   return (
     <Box

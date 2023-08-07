@@ -2,10 +2,6 @@ import { useList } from "@pankod/refine-core"
 
 import {
   PieChart,
-  PropertyReferrals,
-  TotalRevenue,
-  PropertyCard,
-  TopAgent
 } from 'components'
 
 import FeaturedChart from "components/charts/FeaturedChart"

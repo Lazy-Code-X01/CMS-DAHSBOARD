@@ -33,11 +33,8 @@ import './index.css'
 import { 
   Login,
   Home,
-  Agents,
-  MyProfile,
   MemberDetails,
   AllMembers,
-  AgentProfile,
   CreateMembers,
   EditMembers,
   Attendance,
@@ -119,7 +116,8 @@ function App() {
       <RefineSnackbarProvider>
         {/* <BrowserRouter> */}
           <Refine
-            dataProvider={dataProvider("https://api.fake-rest.refine.dev")}
+            // dataProvider={dataProvider("https://api.fake-rest.refine.dev")}
+            dataProvider={dataProvider("http://projectcaas.ng/api/Account/authenticate")}
             notificationProvider={notificationProvider}
             ReadyPage={ReadyPage}
             catchAll={<ErrorComponent />}
@@ -169,7 +167,7 @@ function App() {
           >
             <Routes>
               {/* <Route path="/login" element={<Outlet />} /> */}
-              <Route path="/member/:memberId" element={<MemberDetails />} />
+              {/* <Route path="/member/:memberId" element={<MemberDetails />} /> */}
               {/* <Route path="/forgot-password" element={<ForgotPasswordPage />} /> */}
             </Routes>
           </Refine>
